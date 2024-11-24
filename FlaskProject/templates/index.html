@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pc Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <a class="logo" href="/"><h1>Pc Store</h1></a>
+
+    </header>
+
+    <div class="vision">
+        <h3>Our Products</h3>
+    </div>
+
+    <main>
+        <div class="products">
+            {% for product in products %}
+            <div class="product">
+                <h4>{{ product.name }}</h4>
+                <img src="{{ product.image_url }}" alt="{{ product.name }}">
+                <p>ID: {{ product.id }}</p>
+                <p>Price: {{ product.price }}</p>
+                <p>{{ product.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <div class="contact" id="contact">
+        <h3>Contact Us</h3>
+        <p>We’d love to hear from you! Reach out to us through any of the methods below.</p>
+
+    </div>
+</body>
+</html>
