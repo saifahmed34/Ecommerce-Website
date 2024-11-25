@@ -12,6 +12,8 @@ products = [
 @app.route('/')
 def web():  # put application's code here
     return render_template('index.html', products=products)
-
+@app.route('/products')
+def hardware():
+    return render_template('hardwareAcc.html')
 if __name__ == '__main__':
     app.run()

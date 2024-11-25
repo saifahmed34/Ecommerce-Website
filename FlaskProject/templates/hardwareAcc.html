@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pc Shop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesss.css') }}">
+</head>
+<body>
+    <header>
+        <a class="logo" href="/"><h1>Pc Store</h1></a>
+    </header>
+
+    <section class="category" id="personal-computers">
+        <h3>Hardware accessories</h3>
+        <div class="products">
+            <div class="product">
+                <img src="{{ url_for('static', filename='images/acc1.jpg') }}" alt="XICEN Gaming Headphone Stand PC">
+                <h4>XICEN Gaming Headphone Stand PC</h4>
+                <p>Responsive with any Headphone model</p>
+                <p>Price: 7,999 EGP</p>
+                <button class="buy-btn" onclick="addToCart('XICEN Gaming Headphone Stand PC')">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="../static/images/acc2.jpg" alt="Marvo L-Size Gaming Mousepad">
+                <h4>Marvo L-Size Gaming Mousepad</h4>
+                <p>Mixed color horse racing MG</p>
+                <p>Price: 800 EGP</p>
+                <button class="buy-btn" onclick="addToCart('Marvo L-Size Gaming Mousepad')">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="../static/images/acc3.jpg" alt="ELECTRIC GIANT PC Speakers">
+                <h4>ELECTRIC GIANT PC Speakers</h4>
+                <p>Bluetooth, USB, SD Card - 10W</p>
+                <p>Price: 2,000 EGP</p>
+                <button class="buy-btn" onclick="addToCart('ELECTRIC GIANT PC Speakers')">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function addToCart(productName) {
+            alert(productName + " has been added to your cart!");
+        }
+    </script>
+</body>
+</html>
