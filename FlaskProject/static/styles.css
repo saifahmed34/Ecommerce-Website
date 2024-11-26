@@ -1,111 +1,37 @@
+/* General Styles */
 body {
     padding: 0;
     margin: 0;
-    background-color: rgb(235, 235, 235);
+    background-color: #ebebeb;
     scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
 }
+
+/* Header Styles */
 header {
-    background-color: #1E1E2F;
+    background-color: #101040;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 0 80px;
 }
+
 .logo {
-    color: #F0A500;
+    color: #f0a500;
     text-decoration: none;
     margin-left: 30px;
 }
 
-
-.vision {
-    background: linear-gradient(145deg, #1E1E2F, #2A2A3C);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 50px;
-    padding: 50px 20px;
-    border-radius: 120px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.vision h3 {
-    color: #F0A500;
-    font-size: 32px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-
-
-.contact {
-    background: linear-gradient(145deg, #1E1E2F, #2A2A3C);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 50px 20px;
-    border-radius: 120px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-}
-.contact h3 {
-    color: #dd0606;
-    font-size: 32px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-.contact p {
-    color: #E0E0E0;
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    max-width: 700px;
-}
-.contact a {
-    color: #F0A500;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-
-.category {
-    background: linear-gradient(145deg, #1E1E2F, #2A2A3C);
-    padding: 40px 20px;
-    border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-bottom: 40px;
-}
-.category h3 {
-    color: #F0A500;
-    font-size: 32px;
-    margin-bottom: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+/* Products Section */
 .products {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
 }
+
 .product {
-    background: #FFFFFF;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -113,10 +39,12 @@ header {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .product:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
+
 .product img {
     width: 100%;
     height: auto;
@@ -124,23 +52,56 @@ header {
     margin-bottom: 15px;
     max-height: 300px;
 }
+
 .product h4 {
-    color: #1E1E2F;
+    color: #1e1e2f;
     font-size: 20px;
     margin-bottom: 10px;
     font-weight: bold;
 }
+
 .product p {
     color: #555;
     font-size: 16px;
     margin-bottom: 10px;
 }
 
+.product p:last-of-type {
+    font-weight: bold;
+    color: #f0a500;
+}
+
+
+/* Vision and Contact Sections */
+.vision, .contact {
+    background: linear-gradient(145deg, #1e1e2f, #2a2a3c);
+    padding: 40px 20px;
+    margin: 50px auto 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    max-width: 1440px;
+    text-align: center;
+}
+
+.vision h3, .contact h3 {
+    color: #f0a500;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
 
 
 /* Media Queries for Mobile */
 @media (max-width: 600px) {
-    header, .cat-bar {
+    header {
         flex-direction: column;
         align-items: flex-start;
         padding: 10px 20px;
@@ -149,7 +110,7 @@ header {
         margin-left: 0;
         margin-top: 10px;
     }
-    .vision, .contact, .category {
+    .vision, .contact {
         padding: 20px 10px;
         width: 90%;
     }
